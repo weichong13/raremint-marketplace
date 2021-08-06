@@ -1,0 +1,49 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Sonarqube Pull-request scanning
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  pull_request:
+    branches:
+      - main
+      - master
+      - develop
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  # CI:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - uses: actions/checkout@v2
+  #     with:
+  #       fetch-depth: 0
+  #   - uses: actions/setup-node@v2
+  #     with:
+  #       node-version: '14'
+  #   - name: Build Dependencies
+  #     run: npm install
+
+  sonarqube-ScanPR:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Extract branch name
+      shell: bash
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branch
+    - name: SonarQube Scan Branch Pull-Request
+      uses: sonarsource/sonarqube-scan-action@master
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+      with:
+        args: >
+          -Dsonar.projectKey=${{ secrets.SONAR_PROJECT }}
+          -Dsonar.pullrequest.key=${{ github.event.pull_request.number }}
+          -Dsonar.pullrequest.branch=${{ steps.extract_branch.outputs.branch }}
+          -Dsonar.pullrequest.base=${{ github.event.pull_request.base.ref }}

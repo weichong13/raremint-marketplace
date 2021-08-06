@@ -1,0 +1,51 @@
+.accordionContainer{
+
+  .accordion{
+    justify-content: space-between;
+    font-size: rem(18);
+    font-weight: bold;
+    color: $night-rider;
+    font-family: "Cabin";
+    background: $white;
+    width: 80%;
+    cursor: pointer;
+    padding: rem(18) rem(18) rem(18)  0;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+  }
+
+  .panel{
+    width: 80%;
+    color: $night-rider;
+    font-family: 'Cabin';
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(14);
+    line-height: rem(22);
+    letter-spacing: rem(0.3);
+    padding: 0 18px 0 0;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0.8;
+    transition: max-height 0.2s ease-out;
+
+    &.isOpen{
+      max-height: rem(100);
+    }
+    
+  }
+
+  .icon{
+    transition: width .5s, height .5s, transform .5s;
+    transform: rotate(180deg);
+
+    &.rotate{
+      transform: rotate(360deg);
+    }
+
+  }
+
+}

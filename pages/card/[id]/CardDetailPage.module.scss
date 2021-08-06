@@ -1,0 +1,19 @@
+.alsoLikeSection {
+  h5 {
+    @include font('Cabin', 700, rem(14), rem(22), rem(0.3));
+    color: $text-color-black-1;
+  }
+
+  .alsoLikeList {
+    a {
+      @include font('Cabin', 400, rem(14), rem(22), rem(0.3));
+      color: $text-color-black-1-80;
+      padding-left: 0;
+      padding-right: rem(30);
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}

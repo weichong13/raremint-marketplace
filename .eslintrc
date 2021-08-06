@@ -1,0 +1,6 @@
+{
+  "extends": ["next", "next/core-web-vitals"]
+  // "rules": {
+  //   "import/newline-after-import": ["error", { "count": 2 }]
+  // }
+}

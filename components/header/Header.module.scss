@@ -1,0 +1,36 @@
+.header {
+  position: relative;
+}
+
+.walletPopup {
+  transform: translateY(100%);
+  position: absolute;
+  right: rem(30);
+  bottom: rem(-1);
+  z-index: 9999;
+  width: rem(300);
+  text-align: center;
+  transition: all 1s ease-in-out;
+  border-width: 0;
+  overflow: hidden;
+  height: 0;
+
+  .walletPopupBody {
+    padding-left: rem(12);
+    padding-right: rem(12);
+
+    .walletPopupTitle {
+      @include font('Cabin', 400, rem(18), rem(18), rem(0.2));
+      color: $primary-color;
+    }
+
+    .walletPopupAddress {
+      @include font('Cabin', 400, rem(10), rem(18), rem(0.2));
+      color: $greenDark;
+    }
+  }
+}
+
+.walletPopupShow {
+  height: auto;
+}

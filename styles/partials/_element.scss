@@ -1,0 +1,19 @@
+@for $spacer from 1 through 5 {
+  .ml-#{$spacer} {
+    margin-left: $spacer * 0.5rem !important;
+  }
+
+  .mr-#{$spacer} {
+    margin-right: $spacer * 0.5rem !important;
+  }
+
+  .mx--#{$spacer} {
+    margin-left: $spacer * -0.5rem !important;
+    margin-right: $spacer * -0.5rem !important;
+  }
+
+  .my--#{$spacer} {
+    margin-top: $spacer * -0.5rem !important;
+    margin-bottom: $spacer * -0.5rem !important;
+  }
+}

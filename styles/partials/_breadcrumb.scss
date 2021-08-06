@@ -1,0 +1,8 @@
+.breadcrumb {
+  .breadcrumb-item {
+    &.active {
+      color: currentColor;
+      text-decoration: unset;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.pagination {
+  justify-content: space-between;
+  align-items: center;
+
+  .pagination-number {
+    color: $text-color-black-1;
+    @include font('Cabin', 400, rem(18), rem(18), rem(0));
+  }
+
+  .btn {
+    &:disabled {
+      color: $text-color-black-1;
+    }
+  }
+}

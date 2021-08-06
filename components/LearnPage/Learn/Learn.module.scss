@@ -1,0 +1,72 @@
+.learn {
+  max-width: 100% ;
+  padding: 0;
+  font-family: "Roboto";
+  margin: auto auto 10% auto;
+
+  .innerContainer{
+    max-width: 100rem;
+    margin: auto;
+  }
+
+  .title{
+    font-size: rem(40);
+    color: $mine-shaft;
+    font-weight: 700;
+  }
+
+  .breadCrumb {
+    margin-top: 3.5%;
+    margin-bottom: rem(10);
+    font-size: rem(14);
+    color: rgba(43, 43, 43, 0.6);
+
+    a {
+      text-decoration: underline;
+    }
+
+  }
+
+  .videoSection{
+    margin-top: 5%;
+    min-height: rem(320);
+    background-color: $tiffany-blue;
+
+    .heading{
+      padding-top: 8%;
+      padding-left: 8%;
+      font-size: rem(32);
+      font-weight: bold;
+      color: $wild-sand;
+    }
+
+    .description{
+      padding-left: 8%;
+      color: $text-color-black-2;
+      margin-top: 5%;
+      letter-spacing: rem(0.3);
+      font-size: rem(16);
+      padding-right: 2%;
+      line-height: rem(22);
+    }
+
+    .img{
+      cursor: pointer;
+    }
+
+  }
+
+  .faqSection{
+    max-width: 83rem;
+    margin: auto;
+    margin-top: 4%;
+
+    .heading{
+      font-family: "Roboto";
+      font-size: rem(32);
+      font-weight: 700;
+      color: $peach;
+    }
+
+  }
+}

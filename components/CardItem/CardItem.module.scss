@@ -1,0 +1,146 @@
+.card {
+  border-width: 0;
+  background-color: transparent;
+  border-radius: rem(8);
+  max-width: rem(320);
+
+  .cardBody {
+    border: rem(1) solid rgba($black, 0.08);
+    border-radius: rem(8) rem(8) 0 0;
+    background-color: $white;
+    padding: rem(26);
+
+    &[data-sold='true'] {
+      img {
+        opacity: 0.5;
+      }
+    }
+
+    .cardImageWrapper {
+      position: relative;
+      height: 100%;
+      padding-top: 94.75%;
+      border-radius: rem(5);
+      overflow: hidden;
+
+      & > div {
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .cardImageSold {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+          opacity: 1;
+        }
+      }
+    }
+
+    .cardTitle {
+      margin-top: rem(26);
+      color: $text-color-black-1;
+      @include font('Roboto', 700, rem(20), rem(25), rem(0.3));
+    }
+
+    .cardPrice {
+      color: $text-color-black-1;
+      @include font('Cabin', 400, rem(18), rem(35), rem(0.2));
+    }
+  }
+
+  .cardFooter {
+    text-align: right;
+    background-color: $text-color-black-1;
+    height: rem(96);
+    border-radius: 0 0 rem(8) rem(8);
+    margin-bottom: rem(15);
+
+    .cardType {
+      @include font('Montserrat', 700, rem(14), rem(20), rem(0.2));
+      position: relative;
+      display: inline-block;
+      padding-left: rem(7);
+      padding-right: rem(7);
+      color: $white;
+
+      &[data-type='ultraRare'] {
+        color: $card-ultraRare-color;
+      }
+
+      .cardTypeBefore {
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: inline-block;
+          content: '';
+          width: rem(4);
+          height: rem(7);
+          border-top: rem(2) solid currentColor;
+          border-left: rem(2) solid currentColor;
+        }
+
+        &::after {
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: inline-block;
+          content: '';
+          width: rem(4);
+          height: rem(7);
+          border-top: rem(2) solid currentColor;
+          border-right: rem(2) solid currentColor;
+        }
+      }
+
+      .cardTypeAfter {
+        &::before {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          display: inline-block;
+          content: '';
+          width: rem(4);
+          height: rem(7);
+          border-bottom: rem(2) solid currentColor;
+          border-left: rem(2) solid currentColor;
+        }
+
+        &::after {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          display: inline-block;
+          content: '';
+          width: rem(4);
+          height: rem(7);
+          border-bottom: rem(2) solid currentColor;
+          border-right: rem(2) solid currentColor;
+        }
+      }
+    }
+  }
+
+  .groupActionButton {
+    margin-left: rem(-7.5);
+    margin-right: rem(-7.5);
+
+    button {
+      @include font('Cabin', 600, rem(18), rem(18), rem(0.3));
+      border-radius: rem(8);
+      width: calc((100% - 30px) / 2);
+      margin: 0 rem(7.5);
+    }
+  }
+}

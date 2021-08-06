@@ -1,0 +1,26 @@
+.slick-slider {
+  .slick-prev {
+    left: rem(25);
+    transform: rotate(180deg);
+  }
+
+  .slick-next {
+    right: rem(25);
+  }
+
+  .slick-prev,
+  .slick-next {
+    width: rem(18);
+    height: rem(30);
+    z-index: 1;
+
+    &::before {
+      content: '';
+      width: inherit;
+      height: inherit;
+      display: block;
+      background-image: url('../../public/images/icon/slider-arrow.svg');
+      background-size: cover;
+    }
+  }
+}

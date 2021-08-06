@@ -1,0 +1,21 @@
+.breadcrumb {
+  color: $text-color-black-1-60;
+
+  ol {
+    margin-bottom: 0;
+  }
+
+  .breadcrumbItem {
+    color: currentColor;
+    text-decoration: underline;
+    @include font("Cabin", 600, rem(14), rem(22), rem(0.3));
+
+    &::before {
+      color: currentColor;
+    }
+  }
+}
+
+.breadcrumbLight {
+  color: $white;
+}

@@ -1,0 +1,30 @@
+.listNewItemSection {
+  padding-top: rem(20);
+  padding-bottom: rem(20);
+
+  .listNewItemTitle {
+    text-align: center;
+    color: $peach;
+    margin-bottom: rem(18);
+    @include font('Roboto', 700, rem(32), rem(40), rem(0.1));
+
+    span {
+      position: relative;
+      z-index: 0;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        border-bottom: rem(12) solid $greenHightlight;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        transform: translateY(-60%);
+        margin-left: rem(-16);
+        padding-left: rem(16);
+        box-sizing: content-box;
+      }
+    }
+  }
+}

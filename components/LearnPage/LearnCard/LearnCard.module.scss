@@ -1,0 +1,98 @@
+.learnCard{
+
+  .breadCrumb{
+    margin-bottom: rem(10);
+    font-size: rem(14);
+    color: rgba(43, 43, 43, 0.6);
+
+    a{
+      text-decoration: underline;
+    }
+
+  }
+
+  .mainContainer{
+    background-color: $text-color-black-2;
+    border-color: $gray-border;
+    display: flex;
+
+    .card-body{
+      padding: 0;
+    }
+
+    .imageSection{
+      height: rem(316);
+
+      div:nth-child(1){
+        height: 100%;
+      }
+
+      .img{
+        border-bottom-left-radius: rem(6);
+        border-top-left-radius: rem(6);
+        object-fit: cover;
+      }
+
+    }
+
+    .body{
+
+      .title{
+        height: rem(40);
+        line-height: 1;
+        margin-top: 7%;
+        font-weight: 700;
+        font-size: rem(20);
+        color:black;
+        margin-bottom: 0;
+        padding-left: 5%;
+      }
+
+      .subText{
+        margin-top: 10px;
+        display: -webkit-box;
+        max-width: 90%;
+        margin: 0 auto;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-family: "Cabin";
+        font-size: rem(12);
+        font-weight: normal;
+        color: $silver-chalice;
+      }
+
+      .line{
+        background: black;
+        width: rem(43.78);
+        height: rem(2);
+        margin-left: 5%;
+        margin-top: 7%;
+      }
+
+      .description{
+        margin-top: 10%;
+        padding-left: 5%;
+        font-family: "Cabin";
+        font-size: rem(14);
+        font-weight: normal;
+        color: black;
+        margin-bottom: 0;
+      }
+
+      .arrow{
+        float: right;
+        margin-right: 6%;
+        margin-top: 8%;
+        cursor: pointer;
+      }
+
+    }
+
+    .name{
+      font-size: rem(12);
+      font-family: "Cabin";
+    }
+  }
+}

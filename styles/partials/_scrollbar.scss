@@ -1,0 +1,23 @@
+// default browser
+/* width */
+::-webkit-scrollbar {
+  width: $scrollbar-track-width;
+  height: $scrollbar-track-width;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $scrollbar-track-bg;
+  border-radius: $scrollbar-thumb-radius;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $scrollbar-thumb-bg;
+  border-radius: $scrollbar-thumb-radius;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $scrollbar-thumb-bg;
+}

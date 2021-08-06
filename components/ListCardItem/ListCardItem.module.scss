@@ -1,0 +1,57 @@
+.listCardItemSection {
+  padding-top: rem(20);
+  padding-bottom: rem(20);
+
+  .listCardItemTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: rem(30);
+
+    h2 {
+      @include font('Roboto', 700, rem(32), rem(40), rem(0.1));
+      margin-bottom: 0;
+      color: $peach;
+
+      img {
+        margin-left: rem(5);
+        margin-bottom: rem(10);
+      }
+    }
+
+    .sortByLabel {
+      text-transform: uppercase;
+      color: $text-color-black-1-60;
+      margin-right: rem(25);
+      @include font('Cabin', 500, rem(12), rem(40), rem(0.3));
+    }
+  }
+
+  .totalItemTitle {
+    margin-top: rem(-30);
+    margin-bottom: rem(20);
+    color: $text-color-black-1-80;
+    @include font('Cabin', 400, rem(16), rem(40), rem(0.1));
+
+    b {
+      font-weight: 500;
+      color: $peach;
+    }
+  }
+
+  .listCardItemContent {
+    min-height: rem(600);
+  }
+
+  .cardItemSpacingBottom {
+    margin-top: rem(95);
+    margin-bottom: rem(55);
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      margin-top: 0;
+    }
+  }
+}

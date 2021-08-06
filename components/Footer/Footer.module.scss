@@ -1,0 +1,140 @@
+footer {
+  .partners {
+    display: flex;
+    align-items: center;
+    height: rem(120);
+    background-color: $primary-color;
+    overflow: hidden;
+  }
+
+  .footer {
+    background-color: $text-color-black-1;
+    padding: rem(15) 0;
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: rem(25);
+      }
+
+      span {
+        @include font('BebasNeue', 400, rem(22), rem(22), rem(0.3));
+        color: $white;
+        text-transform: uppercase;
+        margin-left: rem(10);
+      }
+    }
+
+    .footerMenu {
+      padding-top: rem(40);
+
+      .footerMenuItem {
+        display: inline-flex;
+        flex-direction: column;
+        width: 20%;
+
+        a {
+          @include font('Montserrat', 400, rem(12), rem(22), rem(0.3));
+          color: $text-color-black-2-60;
+          padding: 0 rem(8);
+          margin-bottom: rem(8);
+
+          &:nth-child(1) {
+            @include font('Montserrat', 700, rem(14), rem(22), rem(0.3));
+            color: $white;
+            cursor: auto;
+          }
+        }
+      }
+    }
+
+    .signMeUp {
+      flex-basis: rem(355);
+      flex-grow: unset;
+
+      h6 {
+        color: $white;
+        @include font('Cabin', 700, rem(14), rem(22), rem(0.3));
+      }
+
+      p {
+        color: rgba($white, 0.8);
+        @include font('Cabin', 400, rem(12), rem(20), rem(0.2));
+      }
+
+      .signMeUpForm {
+        position: relative;
+
+        input {
+          padding-right: rem(132);
+          height: rem(50);
+          border-radius: rem(5);
+          border: rem(2) solid $text-color-black-2-50;
+          background-color: transparent;
+          color: $white;
+          @include font('Montserrat', 400, rem(12), rem(22), rem(0.3));
+        }
+
+        button {
+          position: absolute;
+          right: rem(2);
+          top: rem(2);
+          height: rem(46);
+          border: 0;
+          min-width: rem(120);
+          border-radius: rem(5) rem(3) rem(3) rem(5);
+          @include font('Cabin', 700, rem(14), rem(22), rem(0.3));
+        }
+      }
+    }
+  }
+
+  .languageAndCopyright {
+    padding: rem(45) 0;
+    background-color: $text-color-black-1;
+    border-top: rem(1) solid $text-color-black-2;
+
+    .social {
+      text-align: center;
+
+      a {
+        position: relative;
+        display: inline-block;
+        margin: 0 rem(12);
+      }
+    }
+
+    .language {
+      display: inline-flex;
+      color: $text-color-black-2-60;
+      padding: rem(11) rem(14);
+      border: rem(1) solid $text-color-black-2;
+      border-radius: rem(4);
+      @include font('Cabin', 600, rem(14), rem(22), rem(0.3));
+    }
+
+    .footerMenu {
+      margin-left: rem(-16);
+      margin-top: rem(40);
+
+      a {
+        @include font('Montserrat', 500, rem(14), rem(14), rem(0.3));
+        text-transform: uppercase;
+        color: rgba($white, 0.6);
+        padding: 0 rem(10);
+
+        &:not(:last-child) {
+          border-right: rem(1) solid rgba($white, 0.6);
+        }
+      }
+    }
+
+    .copyright {
+      @include font('Montserrat', 500, rem(12), rem(22), rem(0.3));
+      color: rgba($white, 0.6);
+      text-align: right;
+    }
+  }
+}

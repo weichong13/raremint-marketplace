@@ -1,0 +1,15 @@
+.form-control {
+  @include font('Roboto', 400, rem(16), rem(18.75), rem(0.2));
+  border-color: $input-border-color;
+  border-radius: rem(4);
+  height: rem(40);
+
+  &::placeholder {
+    color: $placeholder-color;
+  }
+
+  &:focus {
+    border-color: $primary-color;
+    box-shadow: 0 0 0 0.25rem rgba($primary-color, 0.25);
+  }
+}

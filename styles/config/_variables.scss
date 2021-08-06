@@ -1,0 +1,102 @@
+@use 'sass:math';
+//
+// Color system
+//
+
+// stylelint-disable
+$wild-sand: #f6f6f6;
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$gray-border: #f5f5f5;
+$black: #000;
+$c-black-20: #6e6e6e;
+$c-black: #2c2c2c;
+$c-primary: #1473e6;
+
+$tiffany-blue: #0abab5;
+$blue: #0f56b3;
+$peach: #245861;
+$night-rider: #2b2b2b;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #31d0aa;
+$greenOld: #28a745;
+$greenMedium: #2d9a9a;
+$greenDark: #255861;
+$greenHightlight: #d5f1ca;
+$teal: #20c997;
+$cyan: #17a2b8;
+$hippie-blue: #4da9af;
+
+$mine-shaft: #2a2a2a;
+$font-size-base-px: 16;
+
+$scrollbar-track-bg: $gray-300;
+$scrollbar-track-width: 8px;
+$scrollbar-track-height: 100%;
+$scrollbar-track-radius: 0;
+
+$scrollbar-thumb-bg: $gray-600;
+$scrollbar-thumb-width: 8px;
+$scrollbar-thumb-radius: 4px;
+
+$primary-color: $tiffany-blue;
+$secondary-color: $white;
+$third-color: rgba(43, 43, 43, 0.6);
+$text-color-black-1: #2b2b2b;
+$text-color-black-1-20: rgba($text-color-black-1, 0.2);
+$text-color-black-1-30: rgba($text-color-black-1, 0.3);
+$text-color-black-1-50: rgba($text-color-black-1, 0.5);
+$text-color-black-1-60: rgba($text-color-black-1, 0.6);
+$text-color-black-1-80: rgba($text-color-black-1, 0.8);
+$text-color-black-2: #f6f6f6;
+$text-color-black-2-50: rgba($text-color-black-2, 0.5);
+$text-color-black-2-60: rgba($text-color-black-2, 0.6);
+$text-color-black-3: #c4c4c4;
+$text-color-black-3: #c4c4c4;
+$text-color-black-4: rgb(43, 43, 43);
+$text-color-black-4-40: rgba($text-color-black-4, 0.4);
+$text-color-black-4-60: rgba($text-color-black-4, 0.6);
+$placeholder-color: rgba($black, 0.3);
+$input-border-color: $text-color-black-4-60;
+$silver-chalice: #b1b1b1;
+// Button
+$btn-primary-bg-color: $primary-color;
+$btn-primary-border-color: $primary-color;
+$btn-primary-text-color: $secondary-color;
+$btn-primary-hover-bg-color: rgba($primary-color, 0.75);
+$btn-primary-hover-border-color: rgba($primary-color, 0.75);
+$btn-primary-hover-text-color: $secondary-color;
+
+$btn-secondary-bg-color: $secondary-color;
+$btn-secondary-border-color: $secondary-color;
+$btn-secondary-text-color: $primary-color;
+$btn-secondary-hover-bg-color: $secondary-color;
+$btn-secondary-hover-border-color: $secondary-color;
+$btn-secondary-hover-text-color: $primary-color;
+
+$btn-light-bg-color: rgba($text-color-black-3, 0.5);
+$btn-light-border-color: $btn-light-bg-color;
+$btn-light-text-color: $secondary-color;
+$btn-light-hover-bg-color: $btn-light-bg-color;
+$btn-light-hover-border-color: $btn-light-bg-color;
+$btn-light-hover-text-color: $secondary-color;
+
+// LearnCard Item Type
+$card-ultraRare-color: $primary-color;
+
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';

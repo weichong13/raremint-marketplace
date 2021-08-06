@@ -1,0 +1,40 @@
+
+name: Manually triggered Sonarqube workflow
+
+# Controls when the workflow will run
+on: 
+  workflow_dispatch:
+    inputs:
+        SONAR_TOKEN:
+          description: 'Using this Token for login to Sonarqube system'
+          required: true
+        SONAR_HOST_URL:
+          description: 'Sonarqube Server URL'
+          required: true
+          default: 'http://sonarqube.devblock.io/'
+        SONAR_PROJECT:
+          description: 'Project Name on Sonarqube'
+          required: true
+
+jobs:
+  # This workflow contains a single job called "build"
+  sonarqube:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        # Disabling shallow clone is recommended for improving relevancy of reporting
+        fetch-depth: 0
+    - name: Extract branch name
+      shell: bash
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branch
+    - name: SonarQube Scan Branch trigger
+      uses: sonarsource/sonarqube-scan-action@master
+      env:
+        SONAR_TOKEN: ${{ github.event.inputs.SONAR_TOKEN }}
+        SONAR_HOST_URL: ${{ github.event.inputs.SONAR_HOST_URL}}
+      with:
+        args: >
+          -Dsonar.projectKey=${{ github.event.inputs.SONAR_PROJECT}}
+          -Dsonar.branch.name=${{ steps.extract_branch.outputs.branch }}

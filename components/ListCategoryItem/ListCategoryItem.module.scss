@@ -1,0 +1,10 @@
+.listNewItemSection {
+  padding-top: rem(20);
+  padding-bottom: rem(20);
+
+  .listNewItemTitle {
+    color: $peach;
+    margin-bottom: rem(50);
+    @include font('Roboto', 700, rem(32), rem(40), rem(0.1));
+  }
+}

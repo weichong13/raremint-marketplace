@@ -1,0 +1,61 @@
+header {
+  .navbar {
+    position: relative;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    height: rem(80);
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      color: $text-color-black-1;
+      margin-right: rem(40);
+      @include font('Roboto', 700, rem(40), rem(20), rem(0.2));
+    }
+
+    .navbar-nav {
+      .nav-link {
+        color: $text-color-black-1;
+        padding-left: rem(24);
+        padding-right: rem(24);
+        @include font('Roboto', 700, rem(16), rem(18), rem(0.2));
+
+        &.active,
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+
+    .nav-search {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+
+      input {
+        margin-right: rem(3);
+        max-width: rem(400);
+      }
+
+      button {
+        max-height: rem(40);
+      }
+    }
+
+    .mr-auto {
+      margin-right: auto;
+    }
+  }
+}
+.custom-header {
+  a {
+    color: #2b2b2b;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.125rem;
+    letter-spacing: 0.0125rem;
+    display: block;
+    padding: 0.5rem 1rem;
+  }
+}

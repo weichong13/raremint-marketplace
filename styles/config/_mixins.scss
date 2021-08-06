@@ -1,0 +1,139 @@
+@use 'sass:math';
+// ====================
+// Fonts Size Rem
+// Input: $type (Property css), $size (Value Px)
+// Output: $type: convert to $rem
+// ---
+@function rem($size) {
+  @return math.div($size, $font-size-base-px) + rem;
+}
+
+@mixin vertical-center($position: relative) {
+  @include transform(translateY(-50%));
+  position: $position;
+  top: 50%;
+}
+
+@mixin ver-hor-center($position: absolute) {
+  @include transform(translate(-50%, -50%));
+  position: $position;
+  top: 50%;
+  left: 50%;
+}
+
+// animation
+@mixin animation($name, $duration: 0.5s, $function: linear, $iteration: 1) {
+  animation: $name $duration $function $iteration;
+  -webkit-animation: $name $duration $function $iteration;
+}
+
+//vertical ellipsis
+@mixin vertical-ellipsis($row: 2) {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $row;
+  -webkit-box-orient: vertical;
+}
+
+@mixin ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin appearance($value: none) {
+  -webkit-appearance: $value;
+  -moz-appearance: $value;
+  appearance: $value;
+}
+
+@mixin background-linear-gradient($color1, $color2, $to: left) {
+  background: $color1;
+  background: -moz-linear-gradient($to, $color1 0%, $color2 100%);
+  background: -webkit-linear-gradient($to, $color1 0%, $color2 100%);
+  background: linear-gradient(to right, $color1 0%, $color2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$color1, endColorstr=$color2,GradientType=1 );
+}
+
+@mixin custom-scroll {
+  &::-webkit-scrollbar-track {
+    @include border-radius(15px);
+    // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: $color-scroll;
+  }
+
+  &::-webkit-scrollbar {
+    @include border-radius(15px);
+    width: 6px;
+    background-color: $color-scroll;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @include border-radius(15px);
+    background-color: $bg-scroll;
+  }
+}
+
+@mixin flex-width-col-xs($val) {
+  flex: 0 0 $val;
+  max-width: $val;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 $val;
+  -ms-flex: 0 0 $val;
+}
+
+@mixin btn-theme(
+  $bg: $bg-gradient-primary,
+  $border: $border-primary-color,
+  $color: $white,
+  $bg-hover: $bg-primary-hover,
+  $border-hover: $border-primary-hover,
+  $color-hover: $white
+) {
+  background: $bg;
+  border-color: $border;
+  color: $color;
+  position: relative;
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle,
+  &.disabled,
+  &:disabled {
+    background: $bg;
+    border-color: $border-hover;
+    color: $color-hover;
+  }
+
+  &:active,
+  &:hover,
+  &:focus {
+    box-shadow: none !important;
+    background: $bg-hover;
+    border-color: $border-hover;
+    color: $color-hover;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+@function fa-content($fa-var) {
+  @return unquote('"#{ $fa-var }"');
+}
+
+@mixin font(
+  $font-family,
+  $font-weight,
+  $font-size,
+  $line-height,
+  $letter-spacing
+) {
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}

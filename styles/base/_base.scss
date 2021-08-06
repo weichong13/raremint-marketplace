@@ -1,0 +1,75 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100% !important;
+  padding: 0;
+  margin: 0;
+  font-size: rem(16);
+}
+
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+
+  #root {
+    @extend .full-height !optional;
+  }
+}
+
+a {
+  cursor: pointer;
+  transition: 0.3s;
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: all 5000s ease-in-out 0s;
+  transition-property: background-color, color;
+}
+
+.container {
+  max-width: rem(1224);
+}
+
+.container-fluid {
+  max-width: rem(1344);
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.bg-green {
+  background-color: $primary-color;
+}
+
+.bg-black {
+  background-color: $text-color-black-1;
+}

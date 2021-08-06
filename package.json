@@ -1,0 +1,33 @@
+{
+  "name": "raremint-marketplace",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@polkadot/api": "^5.2.1",
+    "@polkadot/extension-dapp": "^0.39.1",
+    "bootstrap": "^5.0.2",
+    "clsx": "^1.1.1",
+    "fslightbox-react": "^1.6.2",
+    "next": "11.0.1",
+    "react": "17.0.2",
+    "react-bootstrap": "^1.6.1",
+    "react-dom": "17.0.2",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "@types/fslightbox-react": "^1.4.1",
+    "@types/react": "17.0.11",
+    "@types/react-slick": "^0.23.5",
+    "eslint": "7.29.0",
+    "eslint-config-next": "11.0.1",
+    "sass": "^1.35.1",
+    "typescript": "4.3.5"
+  }
+}

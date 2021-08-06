@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-Regular.woff2') format('woff2'),
+    url('/fonts/OpenSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-Light.woff2') format('woff2'),
+    url('/fonts/OpenSans-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-Bold.woff2') format('woff2'),
+    url('/fonts/OpenSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-SemiBold.woff2') format('woff2'),
+    url('/fonts/OpenSans-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+// ROBOTO
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+// MONSTSERRAT
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+// BEBASNEUE
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('/fonts/BebasNeue-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+// CABIN
+@font-face {
+  font-family: 'Cabin';
+  src: url('/fonts/Cabin-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cabin';
+  src: url('/fonts/Cabin-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cabin';
+  src: url('/fonts/Cabin-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}

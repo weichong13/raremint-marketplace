@@ -1,0 +1,8 @@
+.messageSection {
+  background-color: $text-color-black-1;
+  color: $white;
+  text-align: center;
+  padding: rem(18) 0;
+
+  @include font('Montserrat', 700, rem(22), rem(27), rem(0.2));
+}

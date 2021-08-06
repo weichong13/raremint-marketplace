@@ -1,0 +1,17 @@
+.questionAnswer {
+  padding: 0;
+
+  .question {
+    font-size: rem(18);
+    color: rgba(77, 169, 175, 1);
+    font-weight: 600;
+    margin-top: 6%;
+  }
+
+  .answer {
+    margin: 2.5% 0;
+    font-size: rem(18);
+    color: rgba(43, 43, 43, 1);
+    font-weight: 400;
+  }
+}

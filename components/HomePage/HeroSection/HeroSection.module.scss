@@ -1,0 +1,28 @@
+.heroSection {
+  background: linear-gradient(
+    106.35deg,
+    rgba($primary-color, 0.76) 0%,
+    rgba($blue, 0.57) 100%
+  );
+  padding-top: rem(30);
+  padding-bottom: rem(30);
+
+  h1 {
+    margin-top: rem(40);
+    margin-bottom: 0;
+    color: $white;
+    @include font('Montserrat', 700, rem(72), rem(87.77), rem(0.5));
+  }
+
+  p {
+    @include font('Open Sans', 400, rem(16), rem(20), rem(0.2));
+    color: $white;
+    margin-bottom: rem(45);
+  }
+
+  button {
+    @include font('Cabin', 600, rem(20), rem(18), rem(0.3));
+    width: rem(200);
+    height: rem(50);
+  }
+}

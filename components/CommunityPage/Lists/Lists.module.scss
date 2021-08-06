@@ -1,0 +1,80 @@
+.lists {
+  font-family: 'Cabin';
+  padding: 0 3% 20% 3%;
+
+  .mainContainer {
+    min-height: rem(400);
+    border-color: $gray-border;
+    display: flex;
+
+    .custom > div {
+      display: block;
+    }
+
+    .image {
+      object-fit: contain;
+      border-radius: rem(6);
+      padding: rem(7);
+      max-height: rem(280);
+      height: rem(280);
+    }
+
+    .body {
+      min-height: rem(201.33);
+      padding-left: 5.5%;
+      height: 100%;
+
+      .title {
+        font-size: rem(20);
+        font-weight: 700;
+        color: $c-black;
+      }
+
+      .description {
+        font-weight: normal;
+        font-size: rem(14);
+        color: $c-black-20;
+        font-style: normal;
+        letter-spacing: rem(0.3);
+      }
+
+      .lastOnline {
+        margin-left: 5%;
+        color: $c-black-20;
+        font-size: rem(12);
+        font-weight: normal;
+
+        &:before {
+          content: ' \2219 ';
+          margin-right: rem(8);
+        }
+      }
+      .minuteRead {
+        position: absolute;
+        bottom: 3%;
+        right: 3%;
+        font-size: rem(12);
+        font-weight: 600;
+        color: $c-black-20;
+
+        .readFull {
+          display: flex;
+          align-items: center;
+          color: $c-primary;
+          font-size: rem(12);
+          font-weight: bold;
+
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .name {
+      font-size: rem(12);
+      font-family: 'Cabin';
+    }
+  }
+}
