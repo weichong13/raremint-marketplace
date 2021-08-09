@@ -134,7 +134,7 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <Navbar>
+      <Navbar className='position-fixed w-100' style={{ top: '60px' }}>
         <Link href={ROUTER_HOME_PAGE} passHref>
           <Navbar.Brand>
             <Image src={logoIcon} alt='RareMint Logo' />{' '}

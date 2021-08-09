@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
-import styles from './TopMessage.module.scss';
-import { TopMessageProps } from './types';
+import React, { Fragment } from "react";
+import styles from "./TopMessage.module.scss";
+import { TopMessageProps } from "./types";
 
 function TopMessage(props: TopMessageProps) {
   const { text } = props;
