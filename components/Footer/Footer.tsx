@@ -176,6 +176,7 @@ function Footer() {
                 <Link href="/">Press</Link>
               </Nav>
             </Col>
+
             <Col lg="12" className={styles.copyright}>
               @2021 Raremint. All Rights Reserved.
             </Col>
