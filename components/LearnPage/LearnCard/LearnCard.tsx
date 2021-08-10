@@ -1,17 +1,22 @@
 import React from "react";
-import { Card, Container } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import styles from "./LearnCard.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import arrowIcon from "../../../public/images/icon/arrow-gray.png";
 import { LearnCardProps } from "./types";
+import ImgBootStrap from "react-bootstrap/Image";
 
 const LearnCard = (props: LearnCardProps) => {
   return (
     <div className={styles.learnCard}>
       <Card className={[styles.mainContainer, "flex-md-row"].join(" ")}>
         <div className={[styles.imageSection, "col-md-5 col-12"].join(" ")}>
-          <Image className={styles.img} src={props.img} alt="Card Image" />
+          <ImgBootStrap
+            className={styles.img}
+            src={props.featured_image}
+            alt="Card Image"
+          />
         </div>
         <div className={"col-md-7 col-12"}>
           <Card.Body className={[styles.body, "py-0"].join(" ")}>
@@ -27,7 +32,14 @@ const LearnCard = (props: LearnCardProps) => {
               scelerisque.
             </Card.Text>
             <Card.Text className={styles.arrow}>
-              <Link href="/article">
+              <Link
+                href={{
+                  pathname: "article",
+                  query: {
+                    slug: props.slug,
+                  },
+                }}
+              >
                 <Image src={arrowIcon} />
               </Link>
             </Card.Text>

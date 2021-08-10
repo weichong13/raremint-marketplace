@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import styles from "./Learn.module.scss";
 import Link from "next/link";
@@ -9,8 +9,28 @@ import img3 from "../../../public/images/learnPage3.png";
 import video from "../../../public/images/video-frame.png";
 import Image from "next/image";
 import Accordion from "../Accordian";
+import butter from "../../../butter-client";
+import { LearnCardProps } from "../LearnCard/types";
 
 const LearnPage = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    if (data.length === 0) getLearnData();
+  }, [data]);
+
+  const getLearnData = () => {
+    butter.post.list({ page: 1 }).then((response: any) => {
+      if (response.data.data.length > 3) {
+        let data: any = [...response.data.data];
+        data.length = 3;
+        setData(data);
+      } else {
+        setData(response.data.data);
+      }
+    });
+  };
+
   const mockDataImages = [
     {
       title: "Buying and Selling",
@@ -77,10 +97,14 @@ const LearnPage = () => {
 
         <p className={styles.title}>Buy, sell, trade with RareMint.</p>
         <Row>
-          {mockDataImages.map((item, index) => {
+          {data.map((item: LearnCardProps, index) => {
             return (
               <Col key={index} className={"col-md-4 col-12 py-md-0 py-2"}>
-                <LearnCard title={item.title} img={item.imgSrc} />
+                <LearnCard
+                  slug={item.slug}
+                  title={item.title}
+                  featured_image={item.featured_image}
+                />
               </Col>
             );
           })}

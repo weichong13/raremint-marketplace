@@ -1,4 +1,5 @@
 export interface LearnCardProps {
-    title:string;
-    img: StaticImageData;
-};
+  slug: string;
+  title: string;
+  featured_image: string;
+}

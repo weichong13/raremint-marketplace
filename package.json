@@ -12,6 +12,7 @@
     "@polkadot/api": "^5.2.1",
     "@polkadot/extension-dapp": "^0.39.1",
     "bootstrap": "^5.0.2",
+    "buttercms": "^1.2.7",
     "clsx": "^1.1.1",
     "fslightbox-react": "^1.6.2",
     "next": "11.0.1",
