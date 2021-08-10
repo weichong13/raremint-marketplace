@@ -37,6 +37,7 @@ const LearnCard = (props: LearnCardProps) => {
                   pathname: "article",
                   query: {
                     slug: props.slug,
+                    isLearnArticle: true,
                   },
                 }}
               >
