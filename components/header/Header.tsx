@@ -32,7 +32,7 @@ const ModalConnectWallet = (props: any) => {
 
   const handleSubmit = async () => {
     const wsProvider = new WsProvider(
-      process.env.NEXT_PUBLIC_POLKADOT_WS_PROVIDER,
+      process.env.NEXT_PUBLIC_POLKADOT_WS_PROVIDER
     );
     const api = await ApiPromise.create({ provider: wsProvider });
 
@@ -119,7 +119,7 @@ const Header = () => {
 
       if (accountAddress) {
         const wsProvider = new WsProvider(
-          process.env.NEXT_PUBLIC_POLKADOT_WS_PROVIDER,
+          process.env.NEXT_PUBLIC_POLKADOT_WS_PROVIDER
         );
         const api = await ApiPromise.create({ provider: wsProvider });
         const accountDetail = await api.query.system.account(accountAddress);
@@ -134,7 +134,9 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <Navbar className='position-fixed w-100' style={{ top: '60px' }}>
+      <Navbar
+        className={[styles.navbarCustom, 'position-fixed w-100'].join(' ')}
+      >
         <Link href={ROUTER_HOME_PAGE} passHref>
           <Navbar.Brand>
             <Image src={logoIcon} alt='RareMint Logo' />{' '}
