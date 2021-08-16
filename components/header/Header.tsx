@@ -32,7 +32,7 @@ const ModalConnectWallet = (props: any) => {
 
   const handleSubmit = async () => {
     const wsProvider = new WsProvider(
-      process.env.NEXT_PUBLIC_POLKADOT_WS_PROVIDER,
+      process.env.NEXT_PUBLIC_POLKADOT_WS_PROVIDER
     );
     const api = await ApiPromise.create({ provider: wsProvider });
 
@@ -119,7 +119,7 @@ const Header = () => {
 
       if (accountAddress) {
         const wsProvider = new WsProvider(
-          process.env.NEXT_PUBLIC_POLKADOT_WS_PROVIDER,
+          process.env.NEXT_PUBLIC_POLKADOT_WS_PROVIDER
         );
         const api = await ApiPromise.create({ provider: wsProvider });
         const accountDetail = await api.query.system.account(accountAddress);

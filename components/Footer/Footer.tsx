@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from 'react';
 import {
   Button,
   Col,
@@ -7,16 +7,16 @@ import {
   FormControl,
   Nav,
   Row,
-} from "react-bootstrap";
-import styles from "./Footer.module.scss";
-import Image from "next/image";
-import Link from "next/link";
+} from 'react-bootstrap';
+import styles from './Footer.module.scss';
+import Image from 'next/image';
+import Link from 'next/link';
 import {
   ROUTER_COMMUNITY_PAGE,
   ROUTER_LEARN_PAGE,
   ROUTER_MARKETPLACE_PAGE,
   ROUTER_MY_ASSETS_PAGE,
-} from "../../constant/router";
+} from '../../constant/router';
 
 function Footer() {
   return (
@@ -25,37 +25,37 @@ function Footer() {
         <Container>
           <Row>
             <Col>
-              <div className="d-flex justify-content-between">
+              <div className='d-flex justify-content-between'>
                 <Image
-                  src="/images/partners/Tesla.svg"
+                  src='/images/partners/Tesla.svg'
                   width={40}
                   height={51}
-                  alt="Tesla Logo"
-                />{" "}
+                  alt='Tesla Logo'
+                />{' '}
                 <Image
-                  src="/images/partners/Allianz.svg"
-                  alt="Allianz Logo"
+                  src='/images/partners/Allianz.svg'
+                  alt='Allianz Logo'
                   width={156}
                   height={51}
-                />{" "}
+                />{' '}
                 <Image
-                  src="/images/partners/Hsbc.svg"
-                  alt="HSBC Logo"
+                  src='/images/partners/Hsbc.svg'
+                  alt='HSBC Logo'
                   width={201}
                   height={51}
-                />{" "}
+                />{' '}
                 <Image
-                  src="/images/partners/Lexmark.svg"
-                  alt="Lexmark Logo"
+                  src='/images/partners/Lexmark.svg'
+                  alt='Lexmark Logo'
                   width={151}
                   height={51}
-                />{" "}
+                />{' '}
                 <Image
-                  src="/images/partners/Sennheiser.svg"
-                  alt="Sennheiser Logo"
+                  src='/images/partners/Sennheiser.svg'
+                  alt='Sennheiser Logo'
                   width={151}
                   height={51}
-                />{" "}
+                />{' '}
               </div>
             </Col>
           </Row>
@@ -65,17 +65,17 @@ function Footer() {
       <section className={styles.footer}>
         <Container>
           <Row>
-            <Col lg="12" className={styles.logo}>
+            <Col lg='12' className={styles.logo}>
               <Image
-                src="/images/logo-icon.svg"
-                alt="RareMint Logo"
+                src='/images/logo-icon.svg'
+                alt='RareMint Logo'
                 width={25}
                 height={25}
-              />{" "}
+              />{' '}
               <span>RareMint</span>
             </Col>
 
-            <Col lg="12">
+            <Col lg='12'>
               <Row>
                 <Col className={styles.footerMenu}>
                   <Nav className={styles.footerMenuItem}>
@@ -119,8 +119,8 @@ function Footer() {
                   </p>
 
                   <Form inline className={styles.signMeUpForm}>
-                    <FormControl type="email" />
-                    <Button variant="primary" size="sm">
+                    <FormControl type='email' />
+                    <Button variant='primary' size='sm'>
                       Sign Me Up
                     </Button>
                   </Form>
@@ -133,48 +133,48 @@ function Footer() {
 
       <section className={styles.languageAndCopyright}>
         <Container>
-          <Row className="align-items-center">
-            <Col lg="4">
+          <Row className='align-items-center'>
+            <Col lg='4'>
               <div className={styles.language}>
                 United States &nbsp;|&nbsp; English &nbsp;|&nbsp; $USD/ETH
               </div>
             </Col>
-            <Col lg="4" className={styles.social}>
-              <a href="#">
+            <Col lg='4' className={styles.social}>
+              <a href='#'>
                 <Image
-                  src="/images/icon/telegram.svg"
-                  alt="Telegram Icon"
+                  src='/images/icon/telegram.svg'
+                  alt='Telegram Icon'
                   width={32}
                   height={32}
                 />
               </a>
-              <a href="#">
+              <a href='#'>
                 <Image
-                  src="/images/icon/pig.svg"
-                  alt="Pig Icon"
+                  src='/images/icon/pig.svg'
+                  alt='Pig Icon'
                   width={32}
                   height={32}
                 />
               </a>
-              <a href="#">
+              <a href='#'>
                 <Image
-                  src="/images/icon/twitter.svg"
-                  alt="Twitter Icon"
+                  src='/images/icon/twitter.svg'
+                  alt='Twitter Icon'
                   width={32}
                   height={32}
                 />
               </a>
             </Col>
-            <Col lg="4"></Col>
-            <Col lg="12" className={styles.footerMenu}>
+            <Col lg='4'></Col>
+            <Col lg='12' className={styles.footerMenu}>
               <Nav className={styles.footerMenuItem}>
-                <Link href="/">How It Works</Link>
-                <Link href="/">Privacy</Link>
-                <Link href="/">Terms</Link>
-                <Link href="/">Contact</Link>
+                <Link href='/'>How It Works</Link>
+                <Link href='/'>Privacy</Link>
+                <Link href='/'>Terms</Link>
+                <Link href='/'>Contact</Link>
               </Nav>
             </Col>
-            <Col lg="12" className={styles.copyright}>
+            <Col lg='12' className={styles.copyright}>
               @2021 Raremint. All Rights Reserved.
             </Col>
           </Row>
